@@ -1,10 +1,11 @@
 import React from "react";
-import "./App.css";
+
+import { Home } from "./pages";
 
 function App() {
   return (
     <div className="container">
-      <h2>This my first page</h2>
+      <Home />
     </div>
   );
 }
