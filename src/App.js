@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navbar, Sidebar, Footer } from "./components";
 
 import {
   Home,
@@ -15,6 +16,8 @@ import {
 function App() {
   return (
     <Router>
+      <Navbar />
+      <Sidebar />
       <Routes>
         <Route exact path="/">
           <Home />
@@ -32,10 +35,11 @@ function App() {
         <Route exact path="/checkout">
           <Checkout />
         </Route>
-        <Route exact path="/error">
+        <Route exact path="*">
           <Error />
         </Route>
       </Routes>
+      <Footer />
     </Router>
   );
 }
